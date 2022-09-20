@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "spotifyRec"
+version = "0.1.0"
+description = ""
+authors = ["Josie Park"]
+readme = "README.md"
+packages = [{include = "spotifyRec"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+spotipy = "^2.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

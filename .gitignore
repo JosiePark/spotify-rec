@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# logs
+logs/*
+!logs/.gitkeep
+
+# data
+data/*
+!data/.gitkeep
+
+# config
+configs/config_copy.ini
+
+# poetry
+poetry.lock

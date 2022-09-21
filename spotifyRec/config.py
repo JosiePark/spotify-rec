@@ -27,4 +27,4 @@ config = load_config(config_file)
 
 CLIENT_ID = config.get("api_settings", "client_id")
 CLIENT_SECRET = config.get("api_settings", "client_secret")
-REDIRECT_URI = "http://localhost:9001/callback"
+REDIRECT_URI = config.get("api_settings", "redirect_uri")

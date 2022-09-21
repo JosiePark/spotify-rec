@@ -52,13 +52,19 @@ def read_from_api(sp, api_call):
 
     return data
 
-def main():
+def get_track_info(id):
+
+    return track_info
+
+def get_data():
 
     sp = authenticate_spotify()
 
+    logger.info("Reading Top Artists from API")
     artist_api_call = sp.current_user_top_artists()
-    top_artists = read_from_api(sp, sp.current_user_top_artists())
+    top_artists = read_from_api(sp, artist_api_call)
 
+    logger.info("Reading top Tracks from API")
     track_api_call = sp.current_user_top_tracks()
     top_tracks = read_from_api(sp, track_api_call)
 

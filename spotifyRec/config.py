@@ -1,8 +1,8 @@
 import logging
 from configparser import ConfigParser
-import os
 
 logger = logging.getLogger(__name__)
+
 
 def load_config(config_file):
     """Function that reads the config file, that is expected to be in at ini format
@@ -21,6 +21,7 @@ def load_config(config_file):
     except Exception as e:
         logger.error("Was unable to read config file")
         logger.exception(e)
+
 
 config_file = "configs/config.ini"
 config = load_config(config_file)

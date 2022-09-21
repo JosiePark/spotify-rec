@@ -138,6 +138,7 @@ data/*
 
 # config
 configs/config_copy.ini
+configs/config.ini
 
 # poetry
 poetry.lock

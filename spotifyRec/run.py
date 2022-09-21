@@ -2,7 +2,7 @@ import argparse
 import logging
 from datetime import datetime
 
-from spotifyRec.config import CLIENT_ID, CLIENT_SECRET, REDIRECT_URI
+import spotifyRec.data_funcs
 
 run_time = datetime.now().strftime("%Y-%m-%d")
 logging.basicConfig(
@@ -24,3 +24,4 @@ if __name__ == "__main__":
 
     if args.read_data:
         logger.info("Reading data")
+        tracks_df, artists_df = spotifyRec.data_funcs.get_user_data()

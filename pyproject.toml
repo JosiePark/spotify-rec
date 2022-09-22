@@ -9,6 +9,7 @@ packages = [{include = "spotifyRec"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 spotipy = "^2.20.0"
+beautifulsoup4 = "^4.11.1"
 
 
 [build-system]

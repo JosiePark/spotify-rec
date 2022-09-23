@@ -1,8 +1,10 @@
 import argparse
 import logging
 from datetime import datetime
+import pandas as pd
 
 import spotifyRec.data_funcs
+import spotifyRec.genius
 
 run_time = datetime.now().strftime("%Y-%m-%d")
 logging.basicConfig(
@@ -23,5 +25,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.read_data:
-        logger.info("Reading data")
+        logger.info("Generating data from the Spotify and Genius APIs")
         tracks_df, artists_df = spotifyRec.data_funcs.get_user_data()
+        tracks_df = spotifyRec.genius.add_lyrics_to_data(tracks_df)
+    else:
+        logger.info("Reading previously generated data")
+        tracks_df = pd.read_csv("data/tracks_data.csv")
+        artists_data = pd.read_csv("data/artists_data.csv")

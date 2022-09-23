@@ -81,6 +81,7 @@ def process_tracks(tracks_data):
     tracks_df["artist_names"] = tracks_df["artists"].apply(
         extract_artist_from_col
     )
+    tracks_df['main_artist'] = tracks_df['artist_names'].apply(lambda x: x[0])
 
     # album data
     tracks_df["album_id"] = tracks_df["album"].apply(lambda x: x["id"])
@@ -92,6 +93,7 @@ def process_tracks(tracks_data):
     tracks_df["album_type"] = tracks_df["album"].apply(lambda x: x["type"])
 
     cols_to_keep = [
+        "main_artist",
         "artists_id",
         "artist_names",
         "album_id",
@@ -109,6 +111,8 @@ def process_tracks(tracks_data):
     ]
 
     tracks_df = tracks_df[cols_to_keep]
+
+    tracks_df['name'] = tracks_df['name'].astype(str)
 
     return tracks_df
 
@@ -189,9 +193,3 @@ def get_user_data(to_save=True, save_dir="data"):
 
     return tracks_df, artists_df
 
-def get_song_lyrics(track_name, track_artist):
-
-    base_url = 'https://api.genius.com'
-
-
-    return

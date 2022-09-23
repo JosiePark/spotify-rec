@@ -16,14 +16,21 @@ pip install poetry
 poetry install
 ```
 
-In order to run the package yourself, you will need to add your Spotify credentials to configs/settings.ini. These can be found from ...
+In order to run the package yourself, you will need to add your Spotify credentials to configs/settings.ini. These can be found from ... You also need to authenticate the Genius API.
 
 ```bash
 [api_settings]
 client_id =
 client_secret =
 redirect_uri =
+
+[genius_settings]
+client_id = 
+client_secret = 
+client_access_token = 
 ```
+
+
 
 ## How to run
 

@@ -1,6 +1,7 @@
 import pandas as pd
 import logging
 import os
+from bs4 import BeautifulSoup
 
 from spotifyRec.api_funcs import authenticate_spotify, read_from_api
 
@@ -187,3 +188,10 @@ def get_user_data(to_save=True, save_dir="data"):
         tracks_df.to_csv(os.path.join(save_dir, "tracks_data.csv"))
 
     return tracks_df, artists_df
+
+def get_song_lyrics(track_name, track_artist):
+
+    base_url = 'https://api.genius.com'
+
+
+    return

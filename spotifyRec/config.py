@@ -29,3 +29,7 @@ config = load_config(config_file)
 CLIENT_ID = config.get("api_settings", "client_id")
 CLIENT_SECRET = config.get("api_settings", "client_secret")
 REDIRECT_URI = config.get("api_settings", "redirect_uri")
+
+GENIUS_CLIENT_ID = config.get("genius_settings","client_id")
+GENIUS_CLIENT_SECRET = config.get("genius_settings", "client_secret")
+GENIUS_CLIENT_ACCESS_TOKEN = config.get("genius_settings", "client_access_token")

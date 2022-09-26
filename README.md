@@ -1,6 +1,6 @@
 # spotify-rec
 
-WIP
+This is package that downloads your spotify listening history and clusters your most recent played tracks
 
 ## Installation and set-up instructions
 
@@ -29,8 +29,6 @@ client_id =
 client_secret = 
 client_access_token = 
 ```
-
-
 
 ## How to run
 

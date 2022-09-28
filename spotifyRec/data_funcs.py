@@ -188,8 +188,8 @@ def get_user_data(to_save=True, save_dir="data"):
 
     if to_save:
         logger.info("Writing user data to file")
-        artists_df.to_csv(os.path.join(save_dir, "artists_data.csv"))
-        tracks_df.to_csv(os.path.join(save_dir, "tracks_data.csv"))
+        artists_df.to_csv(os.path.join(save_dir, "artists_data.csv"), index = False)
+        tracks_df.to_csv(os.path.join(save_dir, "tracks_data.csv"), index = False)
 
     return tracks_df, artists_df
 
